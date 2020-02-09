@@ -31,7 +31,23 @@ firstline = moon
 
 #------------------ @start:zaid------------------------------
 
+l=[]
 
+with open("sky.txt",'w') as f:
+    f.write("moon\nsun\nshine\nbeauty")
+
+with open("sky.txt",'r') as f:
+    fL=f.readline()
+    print("first line =",fL)
+
+with open("sky.txt",'r') as f:
+    for line in f:
+        l.append(line.strip())
+    print(l)
+
+with open("sky.txt",'r') as f:
+    with open("sky_copy.txt",'w') as fc:
+        fc.write(f.read())
 
 #-------------------- @end:zaid------------------------------
 
